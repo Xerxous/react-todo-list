@@ -12,13 +12,13 @@ let actions = { //action creator
       type: 'ADD_TODO',
       text: text
     }
-  },
-  toggleTodo: (checked) => {
-    return {
-      type: 'TOGGLE_TODO',
-      check: !checked
-    }
   }
+  // toggleTodo: (checked) => {
+  //   return {
+  //     type: 'TOGGLE_TODO',
+  //     check: !checked
+  //   }
+  // }
 }
 
 export default actions

@@ -24,7 +24,7 @@ class TodoInput extends Component {
     })
   }
 
-  render() {
+render() {
     return (
       <div className="row">
         <div className="col-xs-9 col-md-9">
@@ -42,7 +42,6 @@ class TodoInput extends Component {
       </div>
     )
   }
-
 }
 
 export default TodoInput

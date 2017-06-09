@@ -12,7 +12,7 @@ let reducer = (state, action) => {
         todos: [{
           //add new todo info
           text: action.text,
-          completed: action.checked,
+          completed: false,
           id: getId(state)
         }, ...state.todos] //spread: adds the rest of the todos in the state obj
       })//combines two objects into
