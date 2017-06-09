@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
-import TextInput from './TextInput'
+import TodoInput from './TodoInput'
+import TodoList from './TodoList'
+import { connect } from 'react-redux'
 
 class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>This is the App Component</h1>
-        <TextInput/>
+      <div className="jumbotron spaced">
+        <h1>Todo List</h1>
+        <TodoInput dispatch={this.props.dispatch}/>
+        <TodoList dispatch={this.props.dispatch} todos={this.props.todos}/>
       </div>
     )
   }
 
 }
 
-export default App
+function mapStateToProps(state) {
+  return state
+}
+
+export default connect(mapStateToProps)(App)
