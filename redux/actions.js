@@ -5,6 +5,8 @@
 //   type: 'ADD_TODO', //every action has a type
 //   text: 'data' //optional payload
 // }
+//
+// differentiates the type of action, passed in through dispatch
 
 let actions = { //action creator
   addTodo: (text) => {
@@ -12,13 +14,20 @@ let actions = { //action creator
       type: 'ADD_TODO',
       text: text
     }
+  },
+  completeTodo: (task) => {
+    return {
+      type: 'COMPLETE_TODO',
+      completed: !task.completed,
+      id: task.id
+    }
+  },
+  deleteTodo: (task) => {
+    return {
+      type: 'DELETE_TODO',
+      id: task.id
+    }
   }
-  // toggleTodo: (checked) => {
-  //   return {
-  //     type: 'TOGGLE_TODO',
-  //     check: !checked
-  //   }
-  // }
 }
 
 export default actions
